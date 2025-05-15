@@ -18,7 +18,7 @@ class SimilarityEngine:
     def load_data(self) -> pd.DataFrame:
         print(f"Loading play-by-play data for seasons: {self.seasons}")
         df = import_pbp_data(self.seasons)
-        print("Available player names:", df["passer_player_name"].unique())
+        # print("Available player names:", df["passer_player_name"].unique())
         # Filter for relevant offensive plays
         df = df[df['play_type'].isin(['pass', 'run'])]
         return df
@@ -72,4 +72,6 @@ class SimilarityEngine:
 # Example usage (for debugging / dev only)
 if __name__ == "__main__":
     engine = SimilarityEngine()
-    print(engine.find_similar_players("D.Montgomery", top_n=5))
+    playerString = input("Enter a player name in the form: {first intial}.{full last name} ex. P.Mahomes\n")
+    print(f"Players similar to {playerString}")
+    print(engine.find_similar_players(playerString, top_n=5))
