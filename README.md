@@ -1,5 +1,5 @@
 # 🏈 NFL Player Comparison API
-
+![NFL Player Comparison Screenshot](screenshots/player-compare-test.png "NFL Player Comparison Screenshot")
 A FastAPI backend that compares NFL players based on their most recent season stats using machine learning similarity metrics (cosine similarity).
 
 ## 🚀 Features
